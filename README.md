@@ -1,6 +1,4 @@
-## MATH 4610 Repository
-
-### Completed Tasksheets
+## Completed Tasksheets
 
 | Tasksheets | Link |
 | --- | --- |
