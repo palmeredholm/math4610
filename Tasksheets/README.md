@@ -7,6 +7,8 @@
 | Tasksheet 1 | [Tasksheet 1](https://github.com/palmeredholm/math4610/blob/main/Tasksheets/Tasksheet%201.pdf) | September 6, 2021 |
 | Tasksheet 2 | [Tasksheet 2]() | September 14, 2021 |
 
+[Home](https://palmeredholm.github.io/math4610/)
+
 <!-- You can use the [editor on GitHub](https://github.com/palmeredholm/math4610/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
