@@ -1,12 +1,10 @@
 ## MATH 4610
 
+### This is a repository for my Intro to Numerical Analysis course (MATH 4610). Here I will publish links to completed assignments and my software manual.
+
 ### Completed Tasksheets
 
-| Tasksheets | Link |
-| --- | --- |
-| Tasksheet 1 | [Tasksheet 1](https://github.com/palmeredholm/math4610/blob/main/Tasksheet%201.pdf) |
-| Tasksheet 2 | [Tasksheet 2]() |
-
+A table of contents of all completed tasksheets can be accessed [here](https://palmeredholm.github.io/math4610/Tasksheets) to view all completed homework assignments.
 <!-- You can use the [editor on GitHub](https://github.com/palmeredholm/math4610/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
