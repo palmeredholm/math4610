@@ -12,6 +12,6 @@ The following list includes links to extensive documentation for all code writte
 ```
 Description here
 ```
-* **Entry 2.** [Double Precision Machine Epsilon:](../smaceps.md)
+* **Entry 2.** [Double Precision Machine Epsilon:](../dmaceps.md)
 
 <hr>
