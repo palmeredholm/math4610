@@ -4,8 +4,8 @@
 
 | Tasksheets | Link | Due Date |
 | --- | --- | --- |
-| Tasksheet 1 | [Tasksheet 1](../Tasksheet 1.pdf) | September 6, 2021 |
-| Tasksheet 2 | [Tasksheet 2](../Tasksheet 2.pdf) | September 16, 2021 |
+| Tasksheet 1 | [Tasksheet 1](Tasksheet 1.pdf) | September 6, 2021 |
+| Tasksheet 2 | [Tasksheet 2](Tasksheet 2.pdf) | September 16, 2021 |
 
 [Home](../../home.md)
 
