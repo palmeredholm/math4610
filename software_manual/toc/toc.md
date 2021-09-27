@@ -1,8 +1,12 @@
 ## MATH 4610
 
-### Software Manual
+### Software Manual Table of Contents
 
-[Home](https://palmeredholm.github.io/math4610/)
+<hr>
+
+The following list includes links to extensive documentation for all code written for tasksheets. Click [here](https://palmeredholm.github.io/math4610/) to go back to the home page.
+
+<hr>
 
 <!-- You can use the [editor on GitHub](https://github.com/palmeredholm/math4610/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 

@@ -8,7 +8,7 @@ A table of contents of all completed tasksheets can be accessed [here](https://p
 
 ### Software Manual
 
-To document algorithms developed during this semester, a software manual has been created which can be accessed [here](https://palmeredholm.github.io/math4610/Software Manual). The software manual is comprised of short descriptions of the algorithms implemented in this course. For each piece of code developed, there is an entry in the software manual.
+To document algorithms developed during this semester, a software manual has been created which can be accessed [here](https://palmeredholm.github.io/math4610/software_manual). The software manual is comprised of short descriptions of the algorithms implemented in this course. For each piece of code developed, there is an entry in the software manual.
 
 <!-- You can use the [editor on GitHub](https://github.com/palmeredholm/math4610/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
