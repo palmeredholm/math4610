@@ -54,3 +54,9 @@ def smaceps():
     return f'Bits: {ipow}, Value: {seps}'
 ```
 **Last Modified:** September/2021
+<hr>
+
+| [Table of Contents](toc/manual_toc.md)
+| [Next](dmaceps.md)
+
+<hr>
