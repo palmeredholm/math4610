@@ -9,10 +9,9 @@ The following list includes links to extensive documentation for all code writte
 <hr>
 
 * **Entry 1.** [Single Precision Machine Epsilon:]()
-
-        This course presents fundamental content from numerical methods/analysis
-        and introductory computational skills concepts....
-
+```
+Description here
+```
 * **Entry 2.** [Double Precision Machine Epsilon:]()
 
 <hr>
