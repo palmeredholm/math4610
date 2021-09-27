@@ -2,11 +2,11 @@
 
 ### This is a repository for my Intro to Numerical Analysis course (MATH 4610). Here I will publish links to completed assignments and my software manual.
 
-### Completed Tasksheets
+### Tasksheets Table of Contents
 
 A table of contents of all completed tasksheets can be accessed [here](Tasksheets/toc/tasks_toc.md) to view all completed homework assignments.
 
-### Software Manual
+### Software Manual Table of Contents
 
 To document algorithms developed during this semester, a software manual has been created which can be accessed [here](software_manual/toc/manual_toc.md). The software manual is comprised of short descriptions of the algorithms implemented in this course. For each piece of code developed, there is an entry in the software manual.
 
