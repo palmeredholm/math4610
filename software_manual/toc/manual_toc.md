@@ -9,9 +9,9 @@ The following list includes links to extensive documentation for all code writte
 <hr>
 
 * **Entry 1.** [Single Precision Machine Epsilon:]()
-```
-Stuff goes here
-```
+
+>Stuff here
+
 * **Entry 2.** [Double Precision Machine Epsilon:]()
 
 <hr>
