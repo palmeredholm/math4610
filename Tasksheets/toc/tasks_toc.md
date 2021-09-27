@@ -7,7 +7,7 @@
 | Tasksheet 1 | [Tasksheet 1](https://github.com/palmeredholm/math4610/blob/main/Tasksheets/toc/Tasksheet%201.pdf) | September 6, 2021 |
 | Tasksheet 2 | [Tasksheet 2](https://github.com/palmeredholm/math4610/blob/main/Tasksheets/toc/Tasksheet_2.pdf) | September 16, 2021 |
 
-[Home](../../home.md)
+[Home](../../README.md)
 
 <!-- You can use the [editor on GitHub](https://github.com/palmeredholm/math4610/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
