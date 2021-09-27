@@ -4,7 +4,7 @@
 
 <hr>
 
-The following list includes links to extensive documentation for all code written for tasksheets. Click [here](https://palmeredholm.github.io/math4610/) to go back to the home page.
+The following list includes links to extensive documentation for all code written for tasksheets. Click [here](../../home.md) to go back to the home page.
 
 <hr>
 
