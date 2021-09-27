@@ -1,6 +1,6 @@
 ## MATH 4610
 
-### Software Manual Table of Contenets
+### Software Manual Table of Contents
 
 <hr>
 
