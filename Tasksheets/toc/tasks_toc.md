@@ -4,8 +4,8 @@
 
 | Tasksheets | Link | Due Date |
 | --- | --- | --- |
-| Tasksheet 1 | [Tasksheet 1](https://github.com/palmeredholm/math4610/blob/main/Tasksheets/Tasksheet%201.pdf) | September 6, 2021 |
-| Tasksheet 2 | [Tasksheet 2](https://github.com/palmeredholm/math4610/blob/main/Tasksheets/Tasksheet_2.pdf) | September 16, 2021 |
+| Tasksheet 1 | [Tasksheet 1](../Tasksheet 1) | September 6, 2021 |
+| Tasksheet 2 | [Tasksheet 2](../Tasksheet 2) | September 16, 2021 |
 
 [Home](../../home.md)
 
