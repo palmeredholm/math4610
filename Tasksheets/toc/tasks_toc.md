@@ -1,6 +1,6 @@
 ## MATH 4610
 
-### Completed Tasksheets
+### Tasksheet Table of Contents
 
 | Tasksheets | Link | Due Date |
 | --- | --- | --- |
