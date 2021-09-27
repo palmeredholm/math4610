@@ -16,9 +16,9 @@ to be run one time for each computer...
 ```
 * **Entry 2.** [Double Precision Machine Epsilon:](../dmaceps.md)
 ```
-This routine will compute the double precision value for the machine epsilon or the number of digits
-in the representation of real numbers in single precision. This is a routine for analyzing the behavior of any computer. This
-usually will need to be run one time for each computer...
+This routine will compute the double precision value for the machine epsilon or the number of digits in the representation
+of real numbers in single precision. This is a routine for analyzing the behavior of any computer. Thisusually will need
+to be run one time for each computer...
 ```
 
 <hr>
