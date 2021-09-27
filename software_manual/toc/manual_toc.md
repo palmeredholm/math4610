@@ -10,7 +10,7 @@ The following list includes links to extensive documentation for all code writte
 
 * **Entry 1.** [Single Precision Machine Epsilon:](../smaceps.md)
 ```
-Description here
+This routine will compute the single precision value for the machine epsilon or the number of digits in the representation of real numbers in single precision. This is a routine for analyzing the behavior of any computer. This usually will need to be run one time for each computer.
 ```
 * **Entry 2.** [Double Precision Machine Epsilon:](../dmaceps.md)
 
