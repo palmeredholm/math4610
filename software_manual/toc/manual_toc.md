@@ -4,7 +4,7 @@
 
 <hr>
 
-The following list includes links to extensive documentation for all code written for tasksheets. Click [here](../../home.md) to go back to the home page.
+The following list includes links to extensive documentation for all code written for tasksheets. Click [here](../../README.md) to go back to the home page.
 
 <hr>
 
@@ -15,5 +15,10 @@ of real numbers in single precision. This is a routine for analyzing the behavio
 to be run one time for each computer...
 ```
 * **Entry 2.** [Double Precision Machine Epsilon:](../dmaceps.md)
+```
+This routine will compute the double precision value for the machine epsilon or the number of digits
+in the representation of real numbers in single precision. This is a routine for analyzing the behavior of any computer. This
+usually will need to be run one time for each computer...
+```
 
 <hr>
