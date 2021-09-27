@@ -56,7 +56,7 @@ def smaceps():
 **Last Modified:** September/2021
 <hr>
 
-| [Table of Contents](toc/manual_toc.md)
+[Table of Contents](toc/manual_toc.md)
 | [Next](dmaceps.md)
 
 <hr>
