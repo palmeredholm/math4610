@@ -8,7 +8,10 @@ The following list includes links to extensive documentation for all code writte
 
 <hr>
 
-* **Single Precision Machine Epsilon.** [smaceps:]()
-* **Double Precision Machine Epsilon.** [dmaceps:]()
+* **Entry 1.** [Single Precision Machine Epsilon:]()
+```
+Stuff goes here
+```
+* **Entry 2.** [Double Precision Machine Epsilon:]()
 
 <hr>
