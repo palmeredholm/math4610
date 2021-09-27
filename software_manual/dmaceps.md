@@ -54,3 +54,10 @@ end of the second value).
  ```
 
 **Last Modified:** September/2021
+
+<hr>
+
+[Previous](smaceps.md)
+| [Table of Contents](toc/manual_toc.md)
+
+<hr>
