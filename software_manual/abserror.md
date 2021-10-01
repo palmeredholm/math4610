@@ -24,7 +24,7 @@ Output from the lines above:
 ```
 The absolute error when approximating 1.0 with 0.9 is the double precision value given above.
 
-**Implementation/Code:** The following is the code for smaceps()
+**Implementation/Code:** The following is the code for abs_error(x, y)
 ```
 def abs_error(x, y):
     # Find absolute error in approximating x with y
@@ -37,6 +37,6 @@ def abs_error(x, y):
 
 [Previous](dmaceps.md)
 | [Table of Contents](toc/manual_toc.md)
-| [Next]()
+| [Next](relerror.md)
 
 <hr>
