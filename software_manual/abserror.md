@@ -6,11 +6,11 @@
 
 **Language:** Python.
 
-**Description/Purpose:** This routine will compute the absolute error in approximating a number, $x$, with another number, $y$. This is a routine for computing the accuracy of an estimate.
+**Description/Purpose:** This routine will compute the absolute error in approximating a number, x, with another number, y. This is a routine for computing the accuracy of an estimate.
 
-**Input:** There are two input variables needed for this routine. The first variable, $x$, is the number to be approximated. The second variable, $y$, is the number used to approximate $x$.
+**Input:** There are two input variables needed for this routine. The first variable, x, is the number to be approximated. The second variable, y, is the number used to approximate x.
 
-**Output:** This routine returns a double precision value for the absolute error $y$ when approximating $x$.
+**Output:** This routine returns a double precision value for the absolute error y when approximating x.
 
 **Usage/Example:**
 
