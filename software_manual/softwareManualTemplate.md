@@ -1,21 +1,10 @@
 # Math 4610 Fundamentals of Computational Mathematics Software Manual Template File
-This is a template file for building an entry in the student software manual project. You should use the formatting below to
-define an entry in your software manual.
 
 **Routine Name:**           smaceps
 
-**Author:** Joe Koebbe
+**Author:** Palmer Edholm
 
-**Language:** Fortran. The code can be compiled using the GNU Fortran compiler (gfortran).
-
-For example,
-
-    gfortran smaceps.f
-
-will produce an executable **./a.exe** than can be executed. If you want a different name, the following will work a bit
-better
-
-    gfortran -o smaceps smaceps.f
+**Language:** Python.
 
 **Description/Purpose:** This routine will compute the single precision value for the machine epsilon or the number of digits
 in the representation of real numbers in single precision. This is a routine for analyzing the behavior of any computer. This
@@ -94,12 +83,12 @@ end of the second value).
           return
     end
 
-**Last Modified:** September/2017
+**Last Modified:** October/2021
 
 <hr>
 
 [Previous]()
-| [Table of Contents]()
+| [Table of Contents](toc/manual_toc.md)
 | [Next]()
 
 <hr>
