@@ -59,5 +59,6 @@ end of the second value).
 
 [Previous](smaceps.md)
 | [Table of Contents](toc/manual_toc.md)
+| [Next](abserror.md)
 
 <hr>
