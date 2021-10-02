@@ -25,7 +25,9 @@ To compare the graphs of standard quadratic and cubic functions, using the defau
 graphics(['1x^2', '1x^3'])
 ```
 Output from the line above:
+
 ![alt text](task2.png)
+
 The legend in the top right corner helps to differentiate the different graphs shown.
 
 **Implementation/Code:** The following is the code for graphics(expression, xlow, xhigh, ylow, yhigh)
