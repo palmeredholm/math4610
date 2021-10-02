@@ -30,5 +30,9 @@ y. This is a routine for computing the accuracy of an estimate...
 This routine will compute the relative error in approximating a number, x, with another number,
 y. This is a routine for computing the accuracy of an estimate...
 ```
+* **Entry 5.** [Python Graphics in Matplotlib](../graphics.md)
+```
+This routine will graph simple functions in Matplotlib. Only simple functions can be graphed, for example, this routine cannot handle trigonometric functions, logarithmic, or exponential functions...
+```
 
 <hr>
