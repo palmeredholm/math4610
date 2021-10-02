@@ -6,7 +6,7 @@
 
 **Language:** Python.
 
-**Description/Purpose:** This routine will graph simple functions in Matplotlib. Only simple functions can be graphed, for example, this routine cannot handle trigonometric functions, logarithmic, or exponential functions.
+**Description/Purpose:** This routine will graph simple functions in Matplotlib. Only simple functions can be graphed, for example, this routine cannot handle trigonometric, logarithmic, or exponential functions.
 
 **Input:** There are five input variables in this routine:
 
