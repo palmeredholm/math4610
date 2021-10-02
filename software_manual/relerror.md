@@ -18,7 +18,7 @@ The routine has two arguments needed to return the relative error when approxima
 ```
 print(rel_error(1.0, 0.9))
 ```
-Output from the lines above:
+Output from the line above:
 ```
 0.09999999999999998
 ```
