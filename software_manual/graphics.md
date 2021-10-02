@@ -1,93 +1,69 @@
-# Math 4610 Fundamentals of Computational Mathematics Software Manual Template File
+# Python Graphics in Matplotlib
 
-**Routine Name:**           smaceps
+**Routine Name:** graphics
 
 **Author:** Palmer Edholm
 
 **Language:** Python.
 
-**Description/Purpose:** This routine will compute the single precision value for the machine epsilon or the number of digits
-in the representation of real numbers in single precision. This is a routine for analyzing the behavior of any computer. This
-usually will need to be run one time for each computer.
+**Description/Purpose:** This routine will graph simple functions in Matplotlib. Only simple functions can be graphed, for example, this routine cannot handle trigonometric functions, logarithmic, or exponential functions.
 
-**Input:** There are no inputs needed in this case. Even though there are arguments supplied, the real purpose is to
-return values in those variables.
+**Input:** There are five input variables in this routine:
 
-**Output:** This routine returns a single precision value for the number of decimal digits that can be represented on the
-computer being queried.
+* expression: array variable for functional expressions to be graphed. Array elements should be strings, independent variable should always be x, and there should always be a constant in front of all independent variables (e.g., x^2 needs to be 1x^2).
+* xlow: Lowest x value on the graph, default is -10.
+* xhigh: Highest x value on the graph, default is 10.
+* ylow: Lowest y value on the graph, default is -10.
+* yhigh: Highest y value on the graph, default is 10.
+
+**Output:** This routine returns one graph of all functions specified.
 
 **Usage/Example:**
 
-The routine has two arguments needed to return the values of the precision in terms of the smallest number that can be
-represented. Since the code is written in terms of a Fortran subroutine, the values of the machine machine epsilon and
-the power of two that gives the machine epsilon. Due to implicit Fortran typing, the first argument is a single precision
-value and the second is an integer.
-
-      call smaceps(sval, ipow)
-      print *, ipow, sval
-
+To compare the graphs of standard quadratic and cubic functions, using the default gride size, we can make the following call to our graphics function.
+```
+graphics(['1x^2', '1x^3'])
+```
 Output from the lines above:
 
-      24   5.96046448E-08
+![alt text](task2.png)
 
-The first value (24) is the number of binary digits that define the machine epsilon and the second is related to the
-decimal version of the same value. The number of decimal digits that can be represented is roughly eight (E-08 on the
-end of the second value).
+The legend in the top right corner helps to differentiate the different graphs shown.
 
-**Implementation/Code:** The following is the code for smaceps()
+**Implementation/Code:** The following is the code for graphics(expression, xlow, xhigh, ylow, yhigh)
+```
+from matplotlib import pyplot as plt
+import numpy as np
+import regex
+from sympy import sympify
+from sympy.abc import x
 
-      subroutine smaceps(seps, ipow)
-    c
-    c set up storage for the algorithm
-    c --------------------------------
-    c
-          real seps, one, appone
-    c
-    c initialize variables to compute the machine value near 1.0
-    c ----------------------------------------------------------
-    c
-          one = 1.0
-          seps = 1.0
-          appone = one + seps
-    c
-    c loop, dividing by 2 each time to determine when the difference between one and
-    c the approximation is zero in single precision
-    c --------------------------------------------- 
-    c
-          ipow = 0
-          do 1 i=1,1000
-             ipow = ipow + 1
-    c
-    c update the perturbation and compute the approximation to one
-    c ------------------------------------------------------------
-    c
-            seps = seps / 2
-            appone = one + seps
-    c
-    c do the comparison and if small enough, break out of the loop and return
-    c control to the calling code
-    c ---------------------------
-    c
-            if(abs(appone-one) .eq. 0.0) return
-    c
-        1 continue
-    c
-    c if the code gets to this point, there is a bit of trouble
-    c ---------------------------------------------------------
-    c
-          print *,"The loop limit has been exceeded"
-    c
-    c done
-    c ----
-    c
-          return
-    end
 
+def graphics(expression, xlow=-10, xhigh=10, ylow=-10, yhigh=10):
+    plt.xlim([xlow, xhigh])
+    plt.ylim([ylow, yhigh])
+    xvals = np.linspace(xlow, xhigh, 10000)
+    plt.xlabel('x')
+    plt.ylabel('y')
+    for i in range(len(expression)):
+        poly = []
+        for term in regex.findall(r'[+-]?\d*\w+\^?\d*', expression[i]):
+            term = regex.sub(r'(\d*)([A-Za-z]\w*)(.*)', r'\1*\2\3', term)
+            term = term.replace('^', '**')
+            poly.append(term)
+        poly = ''.join(poly)
+        poly = sympify(poly)
+        yvals = [poly.subs(x, y) for y in xvals]
+        plt.plot(xvals, yvals, label=f'y={expression[i]}')
+    plt.legend(loc='best')
+    plt.savefig('task2.png')
+    plt.show()
+```
 **Last Modified:** October/2021
 
 <hr>
 
-[Previous]()
+[Previous](relerror.md)
 | [Table of Contents](toc/manual_toc.md)
 | [Next]()
 
