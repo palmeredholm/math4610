@@ -21,7 +21,7 @@ We can print the call to the function smaceps:
 
       print(smaceps())
 
-Output from the lines above:
+Output from the line above:
 
       Bits: 24, Value: 5.960464477539063e-08
 
