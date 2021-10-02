@@ -21,7 +21,7 @@ We can print the call to the function dmaceps
 
       print(dmaceps())
 
-Output from the lines above:
+Output from the line above:
 
       Bits: 53, Value: 1.1102230246251565e-16
 
