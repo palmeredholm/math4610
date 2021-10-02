@@ -37,6 +37,6 @@ def rel_error(x, y):
 
 [Previous](abserror.md)
 | [Table of Contents](toc/manual_toc.md)
-| [Next]()
+| [Next](graphics.md)
 
 <hr>
