@@ -37,7 +37,7 @@ graphs of different functions to analyze their properties...
 ```
 * **Entry 6.** [Fixed Point Iteration](../fxd_pt_iter.md)
 ```
-This routine will compute the root of a function use fixed point iteration. With a good guess
+This routine will compute the root of a function using fixed point iteration. With a good guess
 (i.e., a point close to a root of the function), the routine will return an approximation of the
 closest root to the guess.
 ```
