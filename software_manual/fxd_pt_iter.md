@@ -31,7 +31,7 @@ Output from the lines above:
 
 Since the number of iterations performed is less than the maximum number of iterations passed into the function, we know that the first element of the tuple is the approximated root near 1 with precision 0.0001.
 
-**Implementation/Code:** The following is the code for smaceps()
+**Implementation/Code:** The following is the code for fxd_pt_iter(x0, f, tol, max_iter)
 
 ```
 import numpy as np
