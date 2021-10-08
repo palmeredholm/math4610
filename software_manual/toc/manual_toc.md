@@ -44,8 +44,8 @@ closest root to the guess.
 * **Entry 7.** [Bisection](../bisection.md)
 ```
 This routine will compute the root of a function using the bisection method. As long as we know
-that there exists one root in some interval, via the intermediate value theorem, we can approximate
-the value of that root down to a specified precision level.
+that there exists one root in some interval, via the intermediate value theorem, we can
+approximate the value of that root down to a specified precision level.
 ```
 
 <hr>
