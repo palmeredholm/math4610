@@ -30,18 +30,18 @@ y. This is a routine for computing the accuracy of an estimate...
 This routine will compute the relative error in approximating a number, x, with another number,
 y. This is a routine for computing the accuracy of an estimate...
 ```
-* **Entry 5.** [Python Graphics in Matplotlib](../graphics.md)
+* **Entry 5.** [Python Graphics in Matplotlib:](../graphics.md)
 ```
 This routine will graph functions using Matplotlib. This routine can be used to compare the
 graphs of different functions to analyze their properties...
 ```
-* **Entry 6.** [Fixed Point Iteration](../fxd_pt_iter.md)
+* **Entry 6.** [Fixed Point Iteration:](../fxd_pt_iter.md)
 ```
 This routine will compute the root of a function using fixed point iteration. With a good guess
 (i.e., a point close to a root of the function), the routine will return an approximation of the
 closest root to the guess.
 ```
-* **Entry 7.** [Bisection](../bisection.md)
+* **Entry 7.** [Bisection:](../bisection.md)
 ```
 This routine will compute the root of a function using the bisection method. As long as we know
 that there exists one root in some interval, via the intermediate value theorem, we can
