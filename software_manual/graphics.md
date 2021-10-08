@@ -26,7 +26,7 @@ graphics(['x**2', 'np.e**(-x**2)', 'np.log(x)'], -5, 5, -5, 5)
 ```
 Output from the line above:
 
-![alt text](task2.png)
+![alt text](sheet4_2.png)
 
 The legend in the bottom left corner helps to differentiate the different graphs shown.
 
