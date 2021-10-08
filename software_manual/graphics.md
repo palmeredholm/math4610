@@ -36,7 +36,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 
 
-def graphics(expression, xlow=-10, xhigh=10, ylow=-10, yhigh=10):
+def graphics(expression, xlow=-10.0, xhigh=10.0, ylow=-10.0, yhigh=10.0):
     # Set size of graph
     plt.xlim([xlow, xhigh])
     plt.ylim([ylow, yhigh])
