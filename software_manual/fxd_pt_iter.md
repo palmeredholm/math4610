@@ -21,7 +21,7 @@
 
 Say we want to find a root of the function <img src="https://render.githubusercontent.com/render/math?math=xe^{3x^2}-7x">. Using our graphics code, we can plot the function to find a good guess.
 
-![alt text](task3.png)
+![alt text](sheet4_3.png)
 
 We can see that there is a root near positive one. Therefore, we can run the following line of code with precision of 0.0001 and max_iter of 1,000.
 
