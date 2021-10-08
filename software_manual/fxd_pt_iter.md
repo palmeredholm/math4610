@@ -1,94 +1,61 @@
 # Math 4610 Fundamentals of Computational Mathematics Software Manual Template File
 
-**Routine Name:**           smaceps
+**Routine Name:** fxd_pt_iter
 
 **Author:** Palmer Edholm
 
 **Language:** Python.
 
-**Description/Purpose:** This routine will compute the single precision value for the machine epsilon or the number of digits
-in the representation of real numbers in single precision. This is a routine for analyzing the behavior of any computer. This
-usually will need to be run one time for each computer.
+**Description/Purpose:** This routine will compute the root of a function use fixed point iteration. With a good guess (i.e., a point close to a root of the function), the routine will return an approximation of the closest root to the guess.
 
-**Input:** There are no inputs needed in this case. Even though there are arguments supplied, the real purpose is to
-return values in those variables.
+**Input:** There are four input variables in this routine:
 
-**Output:** This routine returns a single precision value for the number of decimal digits that can be represented on the
-computer being queried.
+* x0: A point near a root of the function.
+* f: The objective function. Should be passed in as an anonymous function via the use of a lambda function (e.g., lambda x: x**2).
+* tol: Desired tolerance in precision of approximation.
+* max_iter: Maximum number of iterations.
+
+**Output:** This routine returns a tuple of the double precision estimate of the root near the specified guess that either achieves the desired tolerance or exceeds the maximum number of iterations specified and the number of iterations performed.
 
 **Usage/Example:**
 
-The routine has two arguments needed to return the values of the precision in terms of the smallest number that can be
-represented. Since the code is written in terms of a Fortran subroutine, the values of the machine machine epsilon and
-the power of two that gives the machine epsilon. Due to implicit Fortran typing, the first argument is a single precision
-value and the second is an integer.
+Say we want to find a root of the function <img src="https://render.githubusercontent.com/render/math?math=xe^{3x^2}-7x">. Using our graphics code, we can plot the function to find a good guess.
 
-      call smaceps(sval, ipow)
-      print *, ipow, sval
+We can see that there is a root near positive one. Therefore, we can run the following line of code with precision of 0.0001 and max_iter of 1,000.
+
+      print(fxd_pt_iter(1, lambda x: x*np.e**(3*x**2)-7*x, 0.0001, 1000))
 
 Output from the lines above:
 
-      24   5.96046448E-08
+      (0.8055789837178884, 18)
 
-The first value (24) is the number of binary digits that define the machine epsilon and the second is related to the
-decimal version of the same value. The number of decimal digits that can be represented is roughly eight (E-08 on the
-end of the second value).
+Since the number of iterations performed is less than the maximum number of iterations passed into the function, we know that the first element of the tuple is the approximated root near 1 with precision 0.0001.
 
 **Implementation/Code:** The following is the code for smaceps()
 
-      subroutine smaceps(seps, ipow)
-    c
-    c set up storage for the algorithm
-    c --------------------------------
-    c
-          real seps, one, appone
-    c
-    c initialize variables to compute the machine value near 1.0
-    c ----------------------------------------------------------
-    c
-          one = 1.0
-          seps = 1.0
-          appone = one + seps
-    c
-    c loop, dividing by 2 each time to determine when the difference between one and
-    c the approximation is zero in single precision
-    c --------------------------------------------- 
-    c
-          ipow = 0
-          do 1 i=1,1000
-             ipow = ipow + 1
-    c
-    c update the perturbation and compute the approximation to one
-    c ------------------------------------------------------------
-    c
-            seps = seps / 2
-            appone = one + seps
-    c
-    c do the comparison and if small enough, break out of the loop and return
-    c control to the calling code
-    c ---------------------------
-    c
-            if(abs(appone-one) .eq. 0.0) return
-    c
-        1 continue
-    c
-    c if the code gets to this point, there is a bit of trouble
-    c ---------------------------------------------------------
-    c
-          print *,"The loop limit has been exceeded"
-    c
-    c done
-    c ----
-    c
-          return
-    end
+```
+import numpy as np
+
+
+def fxd_pt_iter(x0, f, tol, max_iter):
+    def g(x):
+        return x-(10**(-2))*f(x)
+    iters = 0
+    error = 10 * max_iter
+    while error > tol and iters < max_iter:
+        x1 = g(x0)
+        error = abs(x1-x0)
+        x0 = x1
+        iters += 1
+    return x1, iters
+```
 
 **Last Modified:** October/2021
 
 <hr>
 
-[Previous]()
+[Previous](graphics.md)
 | [Table of Contents](toc/manual_toc.md)
-| [Next]()
+| [Next](bisection.md)
 
 <hr>
