@@ -6,7 +6,7 @@
 
 **Language:** Python.
 
-**Description/Purpose:** This routine will compute the root of a function use fixed point iteration. With a good guess (i.e., a point close to a root of the function), the routine will return an approximation of the closest root to the guess.
+**Description/Purpose:** This routine will compute the root of a function using fixed point iteration. With a good guess (i.e., a point close to a root of the function), the routine will return an approximation of the closest root to the guess.
 
 **Input:** There are four input variables in this routine:
 
