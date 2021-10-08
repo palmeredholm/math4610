@@ -1,93 +1,64 @@
-# Math 4610 Fundamentals of Computational Mathematics Software Manual Template File
+# Bisection
 
-**Routine Name:**           smaceps
+**Routine Name:** bisection
 
 **Author:** Palmer Edholm
 
 **Language:** Python.
 
-**Description/Purpose:** This routine will compute the single precision value for the machine epsilon or the number of digits
-in the representation of real numbers in single precision. This is a routine for analyzing the behavior of any computer. This
-usually will need to be run one time for each computer.
+**Description/Purpose:** This routine will compute the root of a function using the bisection method. As long as we know that there exists one root in some interval, via the intermediate value theorem, we can approximate the value of that root down to a specified precision level.
 
-**Input:** There are no inputs needed in this case. Even though there are arguments supplied, the real purpose is to
-return values in those variables.
+**Input:** There are four input variables in this routine:
 
-**Output:** This routine returns a single precision value for the number of decimal digits that can be represented on the
-computer being queried.
+* a: Lower bound of the closed interval that contains the root.
+* b: Upper bound of the closed interval that contains the root.
+* f: The objective function. Should be passed in as an anonymous function via the use of a lambda function (e.g., lambda x: x**2).
+* tol: Desired tolerance in precision of approximation.
+
+**Output:** This routine returns a double precision estimate of the root contained in the specified interval. The routine calculates how many iterations to perform to achieve the desired level of precision.
 
 **Usage/Example:**
 
-The routine has two arguments needed to return the values of the precision in terms of the smallest number that can be
-represented. Since the code is written in terms of a Fortran subroutine, the values of the machine machine epsilon and
-the power of two that gives the machine epsilon. Due to implicit Fortran typing, the first argument is a single precision
-value and the second is an integer.
+If we want to find a root of the function <img src="https://render.githubusercontent.com/render/math?math=xe^{3x^2}-7x">, we can first graph it to see where the roots lie.
 
-      call smaceps(sval, ipow)
-      print *, ipow, sval
+![alt text](sheet4_3.png)
+
+As we can see, there is one root in the closed and bounded interval [0.5, 1.5]. We can run the following code with precision level 0.0001.
+
+      print(bisection(0.5, 1.5, lambda x: x*np.e**(3*x**2)-7*x, 0.0001))
 
 Output from the lines above:
 
-      24   5.96046448E-08
+      0.80535888671875
 
-The first value (24) is the number of binary digits that define the machine epsilon and the second is related to the
-decimal version of the same value. The number of decimal digits that can be represented is roughly eight (E-08 on the
-end of the second value).
+The number above is the approximate root that lies in the interval [0.5, 1.5] with precision of 0.0001.
 
-**Implementation/Code:** The following is the code for smaceps()
+**Implementation/Code:** The following is the code for bisection(a,b,f,tol)
+```
+import numpy as np
 
-      subroutine smaceps(seps, ipow)
-    c
-    c set up storage for the algorithm
-    c --------------------------------
-    c
-          real seps, one, appone
-    c
-    c initialize variables to compute the machine value near 1.0
-    c ----------------------------------------------------------
-    c
-          one = 1.0
-          seps = 1.0
-          appone = one + seps
-    c
-    c loop, dividing by 2 each time to determine when the difference between one and
-    c the approximation is zero in single precision
-    c --------------------------------------------- 
-    c
-          ipow = 0
-          do 1 i=1,1000
-             ipow = ipow + 1
-    c
-    c update the perturbation and compute the approximation to one
-    c ------------------------------------------------------------
-    c
-            seps = seps / 2
-            appone = one + seps
-    c
-    c do the comparison and if small enough, break out of the loop and return
-    c control to the calling code
-    c ---------------------------
-    c
-            if(abs(appone-one) .eq. 0.0) return
-    c
-        1 continue
-    c
-    c if the code gets to this point, there is a bit of trouble
-    c ---------------------------------------------------------
-    c
-          print *,"The loop limit has been exceeded"
-    c
-    c done
-    c ----
-    c
-          return
-    end
 
+def bisection(a, b, f, tol):
+    fa = f(a)
+    fb = f(b)
+    if fa*fb > 0:
+        raise Exception('Root not in specified interval')
+    error = abs(b-a)
+    k = int((np.log(error / tol) / np.log(2))+1)
+    for i in range(k):
+        c = 0.5 * (a+b)
+        fc = f(c)
+        if fa * fc < 0:
+            b = c
+        else:
+            a = c
+    return c
+```
 **Last Modified:** October/2021
 
 <hr>
 
-[Previous]()
+[Previous](fxd_pt_iter.md)
 | [Table of Contents](toc/manual_toc.md)
 | [Next]()
 
