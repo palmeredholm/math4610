@@ -6,11 +6,11 @@
 
 **Language:** Python.
 
-**Description/Purpose:** This routine will graph simple functions in Matplotlib. Only simple functions can be graphed, for example, this routine cannot handle trigonometric, logarithmic, or exponential functions.
+**Description/Purpose:** This routine will graph functions using Matplotlib. This routine can be used to compare the graphs of different functions to analyze their properties.
 
 **Input:** There are five input variables in this routine:
 
-* expression: array variable for functional expressions to be graphed. Array elements should be strings, independent variable should always be x, and there should always be a constant in front of all independent variables (e.g., x^2 needs to be 1x^2).
+* expression: array variable for functional expressions to be graphed. Array elements should be strings, each string should be python code, Numpy methods should be used to graph more complex functions (i.e., np.e, np.log(), np.cos(), etc.)
 * xlow: Lowest x value on the graph, default is -10.
 * xhigh: Highest x value on the graph, default is 10.
 * ylow: Lowest y value on the graph, default is -10.
@@ -20,26 +20,23 @@
 
 **Usage/Example:**
 
-To compare the graphs of standard quadratic and cubic functions, using the default gride size, we can make the following call to our graphics function.
+To compare the graphs of a quadratic, exponential, and logarithmic function on a grid with x-values from -5 to 5 and y-values from -5 to 5, we can enter the following code.
 ```
-graphics(['1x^2', '1x^3'])
+graphics(['x**2', 'np.e**(-x**2)', 'np.log(x)'], -5, 5, -5, 5)
 ```
 Output from the line above:
 
 ![alt text](task2.png)
 
-The legend in the top right corner helps to differentiate the different graphs shown.
+The legend in the bottom left corner helps to differentiate the different graphs shown.
 
 **Implementation/Code:** The following is the code for graphics(expression, xlow, xhigh, ylow, yhigh)
 ```
 from matplotlib import pyplot as plt
 import numpy as np
-import regex
-from sympy import sympify
-from sympy.abc import x
 
 
-def graphics(expression, xlow=-10, xhigh=10, ylow=-10, yhigh=10):
+def graphics(expression, xlow=-10.0, xhigh=10.0, ylow=-10.0, yhigh=10.0):
     # Set size of graph
     plt.xlim([xlow, xhigh])
     plt.ylim([ylow, yhigh])
@@ -50,20 +47,14 @@ def graphics(expression, xlow=-10, xhigh=10, ylow=-10, yhigh=10):
     plt.ylabel('y')
     # Loop through all strings in array
     for i in range(len(expression)):
-        poly = []
-        # Insert appropriate math operators
-        for term in regex.findall(r'[+-]?\d*\w+\^?\d*', expression[i]):
-            term = regex.sub(r'(\d*)([A-Za-z]\w*)(.*)', r'\1*\2\3', term)
-            term = term.replace('^', '**')
-            poly.append(term)
-        poly = ''.join(poly)
-        # Parse the polynomial so it's a sympy object
-        poly = sympify(poly)
-        # Calculate range values
-        yvals = [poly.subs(x, y) for y in xvals]
+        # Create anonymous function for ith function in expression
+        func = lambda x: eval(expression[i])
+        # Compute range values of function
+        yvals = [func(y) for y in xvals]
         # Plot the function
         plt.plot(xvals, yvals, label=f'y={expression[i]}')
     plt.legend(loc='best')
+    plt.savefig('task2.png')
     plt.show()
 ```
 **Last Modified:** October/2021
