@@ -63,6 +63,6 @@ def graphics(expression, xlow=-10.0, xhigh=10.0, ylow=-10.0, yhigh=10.0):
 
 [Previous](relerror.md)
 | [Table of Contents](toc/manual_toc.md)
-| [Next]()
+| [Next](fxd_pt_iter.md)
 
 <hr>
