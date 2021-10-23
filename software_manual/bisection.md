@@ -60,6 +60,6 @@ def bisection(a, b, f, tol):
 
 [Previous](fxd_pt_iter.md)
 | [Table of Contents](toc/manual_toc.md)
-| [Next]()
+| [Next](newton.md)
 
 <hr>
