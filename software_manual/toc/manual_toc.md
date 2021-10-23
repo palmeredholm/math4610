@@ -39,13 +39,32 @@ graphs of different functions to analyze their properties...
 ```
 This routine will compute the root of a function using fixed point iteration. With a good guess
 (i.e., a point close to a root of the function), the routine will return an approximation of the
-closest root to the guess.
+closest root to the guess...
 ```
 * **Entry 7.** [Bisection:](../bisection.md)
 ```
 This routine will compute the root of a function using the bisection method. As long as we know
 that there exists one root in some interval, via the intermediate value theorem, we can
-approximate the value of that root down to a specified precision level.
+approximate the value of that root down to a specified precision level...
+```
+* **Entry 8.** [Newton's Method:](../newton.md)
+```
+This routine will compute the root of a function using Newton's method. As long as we know a point
+in the function that is close enough to a root and the first derivative of the function, we can
+approximate the root down to a specified precision level...
+```
+* **Entry 9.** [Secant Method](../secant.md)
+```
+This routine will compute the root of a function using the Secant method. As long as we know two
+points in the function that are close enough to a root, we can approximate the root down to a
+specified precision level.
+```
+* **Entry 10.** [Hybrid Newton-Bisection Method](../hybrid.md)
+```
+This routine is a more robust root finding method that combines a bisection step to Newton's
+method to approximate roots. As long as we know an interval that contains at most one root, and
+an initial guess that is close enough to a root (provided we can calculate the first derivative),
+a root can be approximated.
 ```
 
 <hr>
