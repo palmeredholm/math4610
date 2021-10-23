@@ -49,9 +49,9 @@ approximate the value of that root down to a specified precision level...
 ```
 * **Entry 8.** [Newton's Method:](../newton.md)
 ```
-This routine will compute the root of a function using Newton's method. As long as we know a point
-in the function that is close enough to a root and the first derivative of the function, we can
-approximate the root down to a specified precision level...
+This routine will compute the root of a function using Newton's method. As long as we know a
+point in the function that is close enough to a root and the first derivative of the function,
+we can approximate the root down to a specified precision level...
 ```
 * **Entry 9.** [Secant Method](../secant.md)
 ```
