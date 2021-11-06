@@ -18,9 +18,9 @@ computer being queried.
 **Usage/Example:**
 
 We can print the call to the function dmaceps
-
-      print(dmaceps())
-
+```python
+print(dmaceps())
+```
 Output from the line above:
 
       Bits: 53, Value: 1.1102230246251565e-16
@@ -31,7 +31,7 @@ end of the second value).
 
 **Implementation/Code:** The following is the code for smaceps()
 
- ```
+ ```python
  def dmaceps():
     # Initialize variables to compute the machine value
     # near 1.0

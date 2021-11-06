@@ -18,9 +18,9 @@ computer being queried.
 **Usage/Example:**
 
 We can print the call to the function smaceps:
-
-      print(smaceps())
-
+```python
+print(smaceps())
+```
 Output from the line above:
 
       Bits: 24, Value: 5.960464477539063e-08
@@ -30,7 +30,7 @@ decimal version of the same value. The number of decimal digits that can be repr
 end of the second value).
 
 **Implementation/Code:** The following is the code for smaceps()
-```
+```python
 import numpy as np
 
 def smaceps():

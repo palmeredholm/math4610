@@ -24,9 +24,9 @@ Say we want to find a root of the function <img src="https://render.githubuserco
 ![alt text](sheet4_3.png)
 
 We can see that there is a root near positive one. Therefore, we can run the following line of code with precision of 0.0001 and max_iter of 1,000.
-
-      print(fxd_pt_iter(1, lambda x: x*np.e**(3*x**2)-7*x, 0.0001, 1000))
-
+```python
+print(fxd_pt_iter(1, lambda x: x*np.e**(3*x**2)-7*x, 0.0001, 1000))
+```
 Output from the lines above:
 
       (0.8055789837178884, 18)
@@ -35,7 +35,7 @@ Since the number of iterations performed is less than the maximum number of iter
 
 **Implementation/Code:** The following is the code for fxd_pt_iter(x0, f, tol, max_iter)
 
-```
+```python
 import numpy as np
 
 

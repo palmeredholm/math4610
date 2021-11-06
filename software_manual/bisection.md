@@ -24,9 +24,9 @@ If we want to find a root of the function <img src="https://render.githubusercon
 ![alt text](sheet4_3.png)
 
 As we can see, there is one root in the closed and bounded interval [0.5, 1.5]. We can run the following code with precision level 0.0001.
-
-      print(bisection(0.5, 1.5, lambda x: x*np.e**(3*x**2)-7*x, 0.0001))
-
+```python
+print(bisection(0.5, 1.5, lambda x: x*np.e**(3*x**2)-7*x, 0.0001))
+```
 Output from the lines above:
 
       0.80535888671875
@@ -34,7 +34,7 @@ Output from the lines above:
 The number above is the approximate root that lies in the interval [0.5, 1.5] with precision of 0.0001.
 
 **Implementation/Code:** The following is the code for bisection(a,b,f,tol)
-```
+```python
 import numpy as np
 
 

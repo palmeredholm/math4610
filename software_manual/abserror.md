@@ -15,7 +15,7 @@
 **Usage/Example:**
 
 The routine has two arguments needed to return the absolute error when approximating a value. Due to the dynamic nature of Python, if one of the inputs has a decimal place, the result returned will be of double precision. By printing a call to abs_error, we can see what the absolute error is when approximating 1.0 with 0.9.
-```
+```python
 print(abs_error(1.0, 0.9))
 ```
 Output from the line above:
@@ -25,7 +25,7 @@ Output from the line above:
 The absolute error when approximating 1.0 with 0.9 is the double precision value given above.
 
 **Implementation/Code:** The following is the code for abs_error(x, y)
-```
+```python
 def abs_error(x, y):
     # Find absolute error in approximating x with y
     output = abs(x - y)

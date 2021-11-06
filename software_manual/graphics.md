@@ -21,7 +21,7 @@
 **Usage/Example:**
 
 To compare the graphs of a quadratic, exponential, and logarithmic function on a grid with x-values from -5 to 5 and y-values from -5 to 5, we can enter the following code.
-```
+```python
 graphics(['x**2', 'np.e**(-x**2)', 'np.log(x)'], -5, 5, -5, 5)
 ```
 Output from the line above:
@@ -31,7 +31,7 @@ Output from the line above:
 The legend in the bottom left corner helps to differentiate the different graphs shown.
 
 **Implementation/Code:** The following is the code for graphics(expression, xlow, xhigh, ylow, yhigh)
-```
+```python
 from matplotlib import pyplot as plt
 import numpy as np
 
