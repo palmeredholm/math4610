@@ -1,4 +1,4 @@
-# Hybrid Newton-Secant Method
+# Hybrid Secant-Bisection Method
 
 **Routine Name:** hybrid_secant
 
@@ -7,7 +7,7 @@
 **Language:** Python.
 
 **Description/Purpose:** This routine is a more robust root finding method that combines a bisection step to the secant
-method to approximate roots. If after one iteration of Newton's method, the error increases, the routine performs four
+method to approximate roots. If after one iteration of the Secant method, the error increases, the routine performs four
 iterations of bisection to reduce the error. As long as we know an interval that contains at most one root, and two initial
 guesses that are close enough to a root, a root can be approximated.
 
