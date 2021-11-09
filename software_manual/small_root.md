@@ -24,7 +24,7 @@ the hybrid method; therefore, the first derivative of the function will have to 
 
 **Usage/Example:**
 
-If we want to find the of the function <img src="https://render.githubusercontent.com/render/math?math=e^{-x^2}\sin(4x^2-1.0)+0.051"> 
+If we want to find the root of the function <img src="https://render.githubusercontent.com/render/math?math=e^{-x^2}\sin(4x^2-1.0)+0.051"> 
 closest to 0, for example, we can run the following code with 0.0001 precision, 1,000 subintervals, and an initial interval
 of [-5.0,6.0]:
 
