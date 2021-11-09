@@ -76,7 +76,7 @@ def small_root(a, b, n, x0, f, df, tol, max_iter):
     return zero
 ```
 **Alternative:** We could also use the hybrid secant-bisection method to approximate the same result. The following is
-the code to approximate the root closest to x0 using the secant method and x1=0.5 (all other parameters are the same as
+the code to approximate the root closest to x0 using the secant-bisection method and x1=0.5 (all other parameters are the same as
 in the newton-bisection approach above):
 
 ```python
