@@ -80,7 +80,7 @@ def small_root(a, b, n, x0, f, df, tol, max_iter):
 
 <hr>
 
-[Previous](hybrid.md)
+[Previous](hybrid_secant.md)
 | [Table of Contents](toc/manual_toc.md)
 | [Next](roots.md)
 

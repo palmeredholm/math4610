@@ -66,12 +66,20 @@ method to approximate roots. As long as we know an interval that contains at mos
 an initial guess that is close enough to a root (provided we can calculate the first derivative),
 a root can be approximated...
 ```
-* **Entry 11.** [Method to Find Closest Root](../small_root.md)
+* **Entry 11.** [Hybrid Newton-Secant Method](../hybrid_secant.md)
+```
+This routine is a more robust root finding method that combines a bisection step to the secant
+method to approximate roots. If after one iteration of Newton's method, the error increases,
+the routine performs four iterations of bisection to reduce the error. As long as we know an
+interval that contains at most one root, and two initial guesses that are close enough to a
+root, a root can be approximated...
+```
+* **Entry 12.** [Method to Find Closest Root](../small_root.md)
 ```
 This routine approximates the root of a function closest to a specified value. This method uses
 the hybrid method; therefore, the first derivative of the function will have to be supplied...
 ```
-* **Entry 12.** [Method to Find All Roots of a Function](../roots.md)
+* **Entry 13.** [Method to Find All Roots of a Function](../roots.md)
 ```
 This routine approximates all the routes contained in a specified interval of a given function. 
 This method uses the hybrid method; therefore, therefore the first derivative of the function
