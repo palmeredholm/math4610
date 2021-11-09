@@ -92,6 +92,6 @@ def hybrid(a, b, x0, f, df, tol, max_iter):
 
 [Previous](secant.md)
 | [Table of Contents](toc/manual_toc.md)
-| [Next]()
+| [Next](small_root.md)
 
 <hr>

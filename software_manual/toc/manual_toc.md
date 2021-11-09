@@ -57,14 +57,25 @@ we can approximate the root down to a specified precision level...
 ```
 This routine will compute the root of a function using the Secant method. As long as we know two
 points in the function that are close enough to a root, we can approximate the root down to a
-specified precision level.
+specified precision level...
 ```
 * **Entry 10.** [Hybrid Newton-Bisection Method](../hybrid.md)
 ```
 This routine is a more robust root finding method that combines a bisection step to Newton's
 method to approximate roots. As long as we know an interval that contains at most one root, and
 an initial guess that is close enough to a root (provided we can calculate the first derivative),
-a root can be approximated.
+a root can be approximated...
+```
+* **Entry 11.** [Method to Find Closest Root](../small_root.md)
+```
+This routine approximates the root of a function closest to a specified value. This method uses
+the hybrid method; therefore, the first derivative of the function will have to be supplied...
+```
+* **Entry 12.** [Method to Find All Roots of a Function](../roots.md)
+```
+This routine approximates all the routes contained in a specified interval of a given function. 
+This method uses the hybrid method; therefore, therefore the first derivative of the function will
+have to be supplied...
 ```
 
 <hr>
