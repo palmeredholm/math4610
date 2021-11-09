@@ -74,8 +74,8 @@ the hybrid method; therefore, the first derivative of the function will have to 
 * **Entry 12.** [Method to Find All Roots of a Function](../roots.md)
 ```
 This routine approximates all the routes contained in a specified interval of a given function. 
-This method uses the hybrid method; therefore, therefore the first derivative of the function will
-have to be supplied...
+This method uses the hybrid method; therefore, therefore the first derivative of the function
+will have to be supplied...
 ```
 
 <hr>
