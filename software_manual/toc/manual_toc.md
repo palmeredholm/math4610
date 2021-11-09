@@ -76,8 +76,9 @@ root, a root can be approximated...
 ```
 * **Entry 12.** [Method to Find Closest Root](../small_root.md)
 ```
-This routine approximates the root of a function closest to a specified value. This method uses
-the hybrid method; therefore, the first derivative of the function will have to be supplied...
+This routine approximates the root of a function closest to a specified value. Approaches using
+both hybrid methods are shown. In the case of the newton-bisection hybrid method, the first
+derivative will need to be supplied...
 ```
 * **Entry 13.** [Method to Find All Roots of a Function](../roots.md)
 ```

@@ -6,8 +6,8 @@
 
 **Language:** Python.
 
-**Description/Purpose:** This routine approximates the root of a function closest to a specified value. This method uses
-the hybrid method; therefore, the first derivative of the function will have to be supplied.
+**Description/Purpose:** This routine approximates the root of a function closest to a specified value. Approaches using
+both hybrid methods are shown. In the case of the newton-bisection hybrid method, the first derivative will need to be supplied.
 
 **Input:** There are eight input variables in this routine:
 
@@ -42,7 +42,7 @@ Output from the code above:
 0.4836106985428367
 ```
 
-**Implementation/Code:** The following is the code for small_root(a, b, n, x0, f, df, tol, max_iter)
+**Implementation/Code:** The following is the newton-bisection code for small_root(a, b, n, x0, f, df, tol, max_iter)
 
 ```python
 import numpy as np
@@ -66,6 +66,57 @@ def small_root(a, b, n, x0, f, df, tol, max_iter):
     # Append the roots of the intervals to the roots array
     for k in range(len(intervals)):
         roots.append(hybrid.hybrid(intervals[k][0], intervals[k][1], x0, f, df, tol, max_iter))
+    # Initialize first element for comparison
+    zero = abs(roots[0])
+    # Find closest root to the value x0
+    for root in range(1, len(roots)):
+        if abs(roots[root] - x0) <= zero:
+            zero = abs(roots[root])
+    # Return closest root to x0
+    return zero
+```
+**Alternative:** We could also use the hybrid secant-bisection method to approximate the same result. The following is
+the code to approximate the root closest to x0 using the secant method and x1=0.5 (all other parameters are the same as
+in the newton-bisection approach above):
+
+```python
+f = lambda x: np.exp(-x**2)*np.sin(4*x**2-1.0)+0.051
+
+print(small_root(-5.0, 6.0, 1000, 0.0, 0.5, f, 0.0001, 100))
+```
+
+This gives us the following result:
+
+```python
+0.48361069851567895
+```
+
+This is very comparable to what we got using the newton-bisection hybrid approach.
+
+**Implementation/Code:** The following is the secant-bisection code for small_root(a, b, n, x0, x1, f, tol, max_iter)
+
+```python
+import numpy as np
+import hybrid_secant
+
+
+def small_root(a, b, n, x0, x1, f, tol, max_iter):
+    # Initialize arrays to bracket the interval, store intervals that contain roots, and store roots
+    brackets = []
+    intervals = []
+    roots = []
+    # Create partition size for bracketing
+    h = (b-a)/n
+    # Bracket the interval
+    for i in range(n):
+        brackets.append([a + i * h, a + (i + 1) * h])
+    # Append bracketed interval to interval array if the interval contains a root
+    for j in range(len(brackets)):
+        if f(brackets[j][0]) * f(brackets[j][1]) < 0:
+            intervals.append([brackets[j][0], brackets[j][1]])
+    # Append the roots of the intervals to the roots array
+    for k in range(len(intervals)):
+        roots.append(hybrid_secant.hybrid_secant(intervals[k][0], intervals[k][1], x0, x1, f, tol, max_iter))
     # Initialize first element for comparison
     zero = abs(roots[0])
     # Find closest root to the value x0
