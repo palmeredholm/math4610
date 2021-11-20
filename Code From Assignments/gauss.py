@@ -4,6 +4,7 @@ import numpy as np
 def gauss(A, b):
     # Copy the matrix that was passed in to reduce and initialize n for loops
     A = np.copy(A)
+    b = np.copy(b)
     n = len(b)
     # Traverse columns 1 to n-1
     for k in range(n - 1):
