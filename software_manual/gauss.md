@@ -67,7 +67,8 @@ def gauss(A, b):
         for i in range(k + 1, n):
             # Initialize factor variable to lessen computational costs
             factor = A[i, k] / A[k, k]
-            # Reduce each element before the pivot to 0 and change the associated value of the b vector
+            # Reduce each element before the pivot to 0 and change the associated value of the b
+            # vector
             for j in range(k, n):
                 A[i, j] -= factor * A[k, j]
             b[i] -= factor * b[k]
