@@ -86,5 +86,29 @@ This routine approximates all the routes contained in a specified interval of a 
 This method uses the hybrid method; therefore, therefore the first derivative of the function
 will have to be supplied...
 ```
+* **Entry 14.** [Back Substitution](../backsub.md)
+```
+This routine will compute the solution to a system of equations once that system has already
+been reduced to upper triangular. This routine uses back substitution to solve for the unkowns
+of the system. This routine assumes that the matrix passed in is already in upper triangular...
+```
+* **Entry 15.** [Forward Substitution](../frwrdsub.md)
+```
+This routine will compute the solution to a system of equations once that system has already
+been reduced to lower triangular. This routine uses forward substitution to solve for the
+unkowns of the system. This routine assumes that the matrix passed in is already in lower
+triangular...
+```
+* **Entry 16.** [Random Matrix Generation](../matgen.md)
+```
+These four routines are all very similar to each other. Each one creates a square matrix with
+specified random integers for each element, the upper triangular portion, the lower triangular
+portion, or the diagonal elements...
+```
+* **Entry 17.** [Gaussian Elimination](../gauss.md)
+```
+This routine performs Guassian elimination on an augmented matrix to reduce it to row echelon
+form. This routine assumes that the matrix is nonsingular...
+```
 
 <hr>
