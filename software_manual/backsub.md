@@ -58,7 +58,8 @@ def backsub(A, b):
     for i in range(m - 1, -1, -1):
         # Initialize sum variable to facilitate later computations
         sum = b[i]
-        # Traverse each element in the current row and compute the value of the unkown associated with that row
+        # Traverse each element in the current row and compute the value of the unkown associated
+        # with that row
         for j in range(i + 1, n):
             sum -= A[i, j] * x[j]
         x[i] = sum / A[i, i]
