@@ -30,7 +30,8 @@ square = np.asarray(square(4, -10, 10), np.float)
 upper = np.asarray(upr_trng(4, -10, 10), np.float)
 lower = np.asarray(lwr_trng(4, -10, 10), np.float)
 diagonal = np.asarray(diag(4, -10, 10), np.float)
-print(f'Square:\n{square}\nUpper Triangular:\n{upper}\nLower Triangular:\n{lower}\nDiagonal:\n{diagonal}')
+print(f'Square:\n{square}\nUpper Triangular:\n{upper}\nLower Triangular:\n{lower}\nDiagonal:\n'
+      f'{diagonal}')
 ```
 Output from the lines above:
 ```python
