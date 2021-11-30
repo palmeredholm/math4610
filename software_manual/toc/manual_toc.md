@@ -53,20 +53,20 @@ This routine will compute the root of a function using Newton's method. As long 
 point in the function that is close enough to a root and the first derivative of the function,
 we can approximate the root down to a specified precision level...
 ```
-* **Entry 9.** [Secant Method](../secant.md)
+* **Entry 9.** [Secant Method:](../secant.md)
 ```
 This routine will compute the root of a function using the Secant method. As long as we know two
 points in the function that are close enough to a root, we can approximate the root down to a
 specified precision level...
 ```
-* **Entry 10.** [Hybrid Newton-Bisection Method](../hybrid.md)
+* **Entry 10.** [Hybrid Newton-Bisection Method:](../hybrid.md)
 ```
 This routine is a more robust root finding method that combines a bisection step to Newton's
 method to approximate roots. As long as we know an interval that contains at most one root, and
 an initial guess that is close enough to a root (provided we can calculate the first derivative),
 a root can be approximated...
 ```
-* **Entry 11.** [Hybrid Secant-Bisection Method](../hybrid_secant.md)
+* **Entry 11.** [Hybrid Secant-Bisection Method:](../hybrid_secant.md)
 ```
 This routine is a more robust root finding method that combines a bisection step to the secant
 method to approximate roots. If after one iteration of Newton's method, the error increases,
@@ -74,52 +74,57 @@ the routine performs four iterations of bisection to reduce the error. As long a
 interval that contains at most one root, and two initial guesses that are close enough to a
 root, a root can be approximated...
 ```
-* **Entry 12.** [Method to Find Closest Root](../small_root.md)
+* **Entry 12.** [Method to Find Closest Root:](../small_root.md)
 ```
 This routine approximates the root of a function closest to a specified value. Approaches using
 both hybrid methods are shown. In the case of the newton-bisection hybrid method, the first
 derivative will need to be supplied...
 ```
-* **Entry 13.** [Method to Find All Roots of a Function](../roots.md)
+* **Entry 13.** [Method to Find All Roots of a Function:](../roots.md)
 ```
 This routine approximates all the routes contained in a specified interval of a given function. 
 This method uses the hybrid method; therefore, therefore the first derivative of the function
 will have to be supplied...
 ```
-* **Entry 14.** [Back Substitution](../backsub.md)
+* **Entry 14.** [Back Substitution:](../backsub.md)
 ```
 This routine will compute the solution to a system of equations once that system has already
 been reduced to upper triangular. This routine uses back substitution to solve for the unkowns
 of the system. This routine assumes that the matrix passed in is already in upper triangular...
 ```
-* **Entry 15.** [Forward Substitution](../frwrdsub.md)
+* **Entry 15.** [Forward Substitution:](../frwrdsub.md)
 ```
 This routine will compute the solution to a system of equations once that system has already
 been reduced to lower triangular. This routine uses forward substitution to solve for the
 unkowns of the system. This routine assumes that the matrix passed in is already in lower
 triangular...
 ```
-* **Entry 16.** [Random Matrix Generation](../matgen.md)
+* **Entry 16.** [Random Matrix Generation:](../matgen.md)
 ```
 These four routines are all very similar to each other. Each one creates a square matrix with
 specified random integers for each element, the upper triangular portion, the lower triangular
 portion, or the diagonal elements...
 ```
-* **Entry 17.** [Gaussian Elimination](../gauss.md)
+* **Entry 17.** [Gaussian Elimination:](../gauss.md)
 ```
 This routine performs Guassian elimination on an augmented matrix to reduce it to row echelon
 form. This routine assumes that the matrix is nonsingular...
 ```
-* **Entry 18.** [More Matrix Generation](../more_matgen.md)
+* **Entry 18.** [More Matrix Generation:](../more_matgen.md)
 ```
 These two routines create a random diagonally dominant matrix and a Hilbert matrix respectively.
 The size of both is determined by the value passed in. The nonzero elements of the diagonally
 dominant matrix are according to the interval that is passed in...
 ```
-* **Entry 19.** [Solving Square Linear Systems of Equations](../solve.md)
+* **Entry 19.** [Solving Square Linear Systems of Equations:](../solve.md)
 ```
 This routine implements the Gaussian elimination and back substitution methods to solve square
 linear systems of equations. This method assumes that the system has a unique solution...
+```
+* **Entry 20.** [LU Factorization:](../lu.md)
+```
+This routine computes the LU factorization of a given matrix. LU factorization is extremely helpful
+for many computational problems that often arise...
 ```
 
 <hr>

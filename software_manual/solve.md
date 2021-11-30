@@ -69,6 +69,6 @@ def solve(A, b):
 
 [Previous](more_matgen.md)
 | [Table of Contents](toc/manual_toc.md)
-| [Next](sc_part_pivot.md)
+| [Next](lu.md)
 
 <hr>
