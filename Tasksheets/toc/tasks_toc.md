@@ -11,5 +11,6 @@
 | Tasksheet 5 | [Tasksheet 5](https://github.com/palmeredholm/math4610/blob/main/Tasksheets/toc/Tasksheet_5.pdf) | October 22, 2021 |
 | Tasksheet 6 | [Tasksheet 6](https://github.com/palmeredholm/math4610/blob/main/Tasksheets/toc/Tasksheet_6.pdf) | November 8, 2021 |
 | Tasksheet 7 | [Tasksheet 7](https://github.com/palmeredholm/math4610/blob/main/Tasksheets/toc/Tasksheet_7.pdf) | November 19, 2021 |
+| Tasksheet 8 | [Tasksheet 8](https://github.com/palmeredholm/math4610/blob/main/Tasksheets/toc/Tasksheet_8.pdf) | November 29, 2021 |
 
 [Home](../../README.md)
