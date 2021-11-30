@@ -126,5 +126,10 @@ linear systems of equations. This method assumes that the system has a unique so
 This routine computes the LU factorization of a given matrix. LU factorization is extremely
 helpful for many computational problems that often arise...
 ```
+* **Entry 21.** [Scaled Partial Pivoting](../sc_part_pivot.md)
+```
+This routine also computes the LU factorization of a given matrix. However, this routine
+utilizes scaled partial pivoting to deal with problems that are not very well-conditioned...
+```
 
 <hr>

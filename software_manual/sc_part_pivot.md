@@ -1,93 +1,95 @@
-# Math 4610 Fundamentals of Computational Mathematics Software Manual Template File
+# Scaled Partial Pivoting
 
-**Routine Name:**           smaceps
+**Routine Name:** sc_part_pivot
 
 **Author:** Palmer Edholm
 
 **Language:** Python.
 
-**Description/Purpose:** This routine will compute the single precision value for the machine epsilon or the number of digits
-in the representation of real numbers in single precision. This is a routine for analyzing the behavior of any computer. This
-usually will need to be run one time for each computer.
+**Description/Purpose:** This routine also computes the LU factorization of a given matrix. However, this routine utilizes
+scaled partial pivoting to deal with problems that are not very well-conditioned.
 
-**Input:** There are no inputs needed in this case. Even though there are arguments supplied, the real purpose is to
-return values in those variables.
+**Input:** This routine has one input variable:
 
-**Output:** This routine returns a single precision value for the number of decimal digits that can be represented on the
-computer being queried.
+* A: The coefficient matrix to be decomposed
+
+**Output:** This routine returns a tuple of the decomposed lower and upper triangular matrices of the original coefficient
+matrix A using scaled partial pivoting.
 
 **Usage/Example:**
 
-The routine has two arguments needed to return the values of the precision in terms of the smallest number that can be
-represented. Since the code is written in terms of a Fortran subroutine, the values of the machine machine epsilon and
-the power of two that gives the machine epsilon. Due to implicit Fortran typing, the first argument is a single precision
-value and the second is an integer.
-
-      call smaceps(sval, ipow)
-      print *, ipow, sval
-
+We can implement the following code to use scaled partial pivoting on the same diagonally dominant matrix we used in the
+LU factorization entry.
+```python
+A = [[8, 8, 0, 0, 0],
+     [-6, -7, -1, 0, 0],
+     [-9, 1, 16, 3, -1],
+     [5, 1, 0, 6, 0],
+     [2, 1, 1, 0, -4]]
+L, U = sc_part_pivot(A)
+print(f'L:\n{L}\nU:\n{U}')
+```
 Output from the lines above:
+```
+L:
+[[ 1.          0.          0.          0.          0.        ]
+ [ 0.625       1.          0.          0.          0.        ]
+ [-1.125      -2.5         1.          0.          0.        ]
+ [ 0.25        0.25        0.0625      1.          0.        ]
+ [-0.75        0.25       -0.0625      0.14285714  1.        ]]
+U:
+[[ 8.      8.      0.      0.      0.    ]
+ [ 0.     -4.      0.      6.      0.    ]
+ [ 0.      0.     16.     18.     -1.    ]
+ [ 0.      0.      0.     -2.625  -3.9375]
+ [ 0.      0.      0.      0.      0.5   ]]
+```
+Notice how the decomposed matrices are different from what we got using traditional, straight-forward pivoting.
 
-      24   5.96046448E-08
-
-The first value (24) is the number of binary digits that define the machine epsilon and the second is related to the
-decimal version of the same value. The number of decimal digits that can be represented is roughly eight (E-08 on the
-end of the second value).
-
-**Implementation/Code:** The following is the code for smaceps()
-
-      subroutine smaceps(seps, ipow)
-    c
-    c set up storage for the algorithm
-    c --------------------------------
-    c
-          real seps, one, appone
-    c
-    c initialize variables to compute the machine value near 1.0
-    c ----------------------------------------------------------
-    c
-          one = 1.0
-          seps = 1.0
-          appone = one + seps
-    c
-    c loop, dividing by 2 each time to determine when the difference between one and
-    c the approximation is zero in single precision
-    c --------------------------------------------- 
-    c
-          ipow = 0
-          do 1 i=1,1000
-             ipow = ipow + 1
-    c
-    c update the perturbation and compute the approximation to one
-    c ------------------------------------------------------------
-    c
-            seps = seps / 2
-            appone = one + seps
-    c
-    c do the comparison and if small enough, break out of the loop and return
-    c control to the calling code
-    c ---------------------------
-    c
-            if(abs(appone-one) .eq. 0.0) return
-    c
-        1 continue
-    c
-    c if the code gets to this point, there is a bit of trouble
-    c ---------------------------------------------------------
-    c
-          print *,"The loop limit has been exceeded"
-    c
-    c done
-    c ----
-    c
-          return
-    end
-
-**Last Modified:** October/2021
+**Implementation/Code:** The following is the code for sc_part_pivot(A)
+```python
+def sc_part_pivot(A):
+    # Initialize needed matrices and arrays
+    A = np.asarray(A, np.float)
+    B = np.zeros((len(A[0]), len(A[0])), np.float)
+    n = len(A[0])
+    s = np.copy(A[0])
+    indmap = [1 for i in range(n)]
+    # Fill indmap and compute scales
+    for i in range(n):
+        indmap[i] = i
+        smax = 0
+        for j in range(n):
+            smax = max(smax, abs(A[i, j]))
+        s[i] = smax
+    for k in range(n-1):
+        rmax = 0
+        # Find largest elements in each row and update indmap accordingly
+        for i in range(k, n):
+            r = abs(A[indmap[i], k] / s[indmap[i]])
+            if r > rmax:
+                rmax, j = r, i
+        indmap[j], indmap[k] = indmap[k], indmap[j]
+        # Perform LU factorization
+        for i in range(k+1, n):
+            xmult = A[indmap[i], k] / A[indmap[k], k]
+            for j in range(k, n):
+                A[indmap[i], j] -= xmult * A[indmap[k], j]
+            B[indmap[i], k] = xmult
+    # Arrange L and U matrices according to indmap
+    U = np.empty_like(A, np.float)
+    L = np.empty_like(A, np.float)
+    for j in range(n):
+        U[j] = A[indmap[j]]
+        L[j] = B[indmap[j]]
+        L[j, j] = 1.0
+    return L, U
+```
+**Last Modified:** November/2021
 
 <hr>
 
-[Previous]()
+[Previous](lu.md)
 | [Table of Contents](toc/manual_toc.md)
 | [Next]()
 
