@@ -6,7 +6,7 @@
 
 **Language:** Python.
 
-**Description/Purpose:** This routine approximates all the routes contained in a specified interval of a given function. 
+**Description/Purpose:** This routine approximates all the roots contained in a specified interval of a given function. 
 This method uses the hybrid method; therefore, therefore the first derivative of the function will have to be supplied.
 
 **Input:** There are eight input variables in this routine:
