@@ -110,5 +110,16 @@ portion, or the diagonal elements...
 This routine performs Guassian elimination on an augmented matrix to reduce it to row echelon
 form. This routine assumes that the matrix is nonsingular...
 ```
+* **Entry 18.** [More Matrix Generation](../more_matgen.md)
+```
+These two routines create a random diagonally dominant matrix and a Hilbert matrix respectively.
+The size of both is determined by the value passed in. The nonzero elements of the diagonally
+dominant matrix are according to the interval that is passed in...
+```
+* **Entry 19.** [Solving Square Linear Systems of Equations](../solve.md)
+```
+This routine implements the Gaussian elimination and back substitution methods to solve square
+linear systems of equations. This method assumes that the system has a unique solution...
+```
 
 <hr>

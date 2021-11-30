@@ -82,6 +82,6 @@ def gauss(A, b):
 
 [Previous](matgen.md)
 | [Table of Contents](toc/manual_toc.md)
-| [Next]()
+| [Next](more_matgen.md)
 
 <hr>
