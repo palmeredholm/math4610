@@ -123,8 +123,8 @@ linear systems of equations. This method assumes that the system has a unique so
 ```
 * **Entry 20.** [LU Factorization:](../lu.md)
 ```
-This routine computes the LU factorization of a given matrix. LU factorization is extremely helpful
-for many computational problems that often arise...
+This routine computes the LU factorization of a given matrix. LU factorization is extremely
+helpful for many computational problems that often arise...
 ```
 
 <hr>
