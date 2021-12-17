@@ -126,10 +126,82 @@ linear systems of equations. This method assumes that the system has a unique so
 This routine computes the LU factorization of a given matrix. LU factorization is extremely
 helpful for many computational problems that often arise...
 ```
-* **Entry 21.** [Scaled Partial Pivoting](../sc_part_pivot.md)
+* **Entry 21.** [Scaled Partial Pivoting:](../sc_part_pivot.md)
 ```
 This routine also computes the LU factorization of a given matrix. However, this routine
 utilizes scaled partial pivoting to deal with problems that are not very well-conditioned...
+```
+* **Entry 22.** [Vector Addition:](../vec_add.md)
+```
+
+```
+* **Entry 23.** [Vector Subtraction:](../vec_subtract.md)
+```
+
+```
+* **Entry 24.** [Scalar Multiplication for Vectors:](../vec_scalar.md)
+```
+
+```
+* **Entry 25.** [Vector Dot Product:](../vec_dot_prod.md)
+```
+
+```
+* **Entry 26.** [Outer Product:](../outer_product.md)
+```
+
+```
+* **Entry 27.** [Vector 1-Norm:](../vec_mag_l1.md)
+```
+
+```
+* **Entry 28.** [Vector 2-Norm:](../vec_mag_l2.md)
+```
+
+```
+* **Entry 29.** [Vector Infinity-Norm:](../vec_mag_linf.md)
+```
+
+```
+* **Entry 30.** [Vector Difference 1-Norm:](../vec_err_l1.md)
+```
+
+```
+* **Entry 31.** [Vector Difference 2-Norm:](../vec_err_l2.md)
+```
+
+```
+* **Entry 32.** [Vector Difference Infinity-Norm:](../vec_err_linf.md)
+```
+
+```
+* **Entry 33.** [Matrix Addition:](../mat_add.md)
+```
+
+```
+* **Entry 34.** [Matrix Subtraction:](../mat_subtract.md)
+```
+
+```
+* **Entry 35.** [Scalar Multiplication for Matrices:](../mat_scalar.md)
+```
+
+```
+* **Entry 36.** [Matrix Transpose:](../mat_transpose.md)
+```
+
+```
+* **Entry 37.** [Dot Product of a Matrix and a Vector:](../mat_vec_prod.md)
+```
+
+```
+* **Entry 38.** [Matrix Dot Product:](../mat_prod.md)
+```
+
+```
+* **Entry 39.** [Jacobi Iteration:](../jacobi.md)
+```
+
 ```
 
 <hr>

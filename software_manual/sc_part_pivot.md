@@ -91,6 +91,6 @@ def sc_part_pivot(A):
 
 [Previous](lu.md)
 | [Table of Contents](toc/manual_toc.md)
-| [Next]()
+| [Next](vec_add.md)
 
 <hr>
