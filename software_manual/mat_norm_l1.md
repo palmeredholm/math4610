@@ -87,8 +87,8 @@ end of the second value).
 
 <hr>
 
-[Previous](power.md)
+[Previous](inv_power.md)
 | [Table of Contents](toc/manual_toc.md)
-| [Next](mat_norm_l1.md)
+| [Next](mat_norm_l2.md)
 
 <hr>

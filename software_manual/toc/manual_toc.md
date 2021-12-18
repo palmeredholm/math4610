@@ -209,11 +209,23 @@ Jacobi iteration is less accurate than the other methods listed because it is on
 approximation; however, it is a much faster and more robust method for solving linear
 systems...
 ```
-* **Entry 40.** [The Power Method](../power.md)
+* **Entry 40.** [The Power Method:](../power.md)
 ```
 
 ```
-* **Entry 41.** [The Inverse Power Method](../inv_power.md)
+* **Entry 41.** [The Inverse Power Method:](../inv_power.md)
+```
+
+```
+* **Entry 42.** [1-Matrix Norm:](../mat_norm_l1.md)
+```
+
+```
+* **Entry 43.** [2-Matrix Norm:](../mat_norm_l2.md)
+```
+
+```
+* **Entry 44.** [Infinity-Matrix Norm:](../mat_norm_linf.md)
 ```
 
 ```
