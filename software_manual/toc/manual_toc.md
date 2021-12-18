@@ -229,5 +229,9 @@ systems...
 ```
 
 ```
+* **Entry 45.** [Parallelism](../parallel.md)
+```
+
+```
 
 <hr>

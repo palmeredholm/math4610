@@ -87,8 +87,8 @@ end of the second value).
 
 <hr>
 
-[Previous](mat_norm_l2.md)
+[Previous](mat_norm_linf.md)
 | [Table of Contents](toc/manual_toc.md)
-| [Next](parallel.md)
+| [Next]()
 
 <hr>
