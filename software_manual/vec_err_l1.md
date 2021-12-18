@@ -48,6 +48,6 @@ def err_1(x, y):
 
 [Previous](vec_mag_linf.md)
 | [Table of Contents](toc/manual_toc.md)
-| [Next](vec_mag_l2.md)
+| [Next](vec_err_l2.md)
 
 <hr>
