@@ -196,38 +196,44 @@ This routine will compute the transpose of a given matrix...
 ```
 * **Entry 37.** [Dot Product of a Matrix and a Vector:](../mat_vec_prod.md)
 ```
-This routine will compute the dot product of a conformable matrix and vector.
+This routine will compute the dot product of a conformable matrix and vector...
 ```
 * **Entry 38.** [Matrix Dot Product:](../mat_prod.md)
 ```
-This routine will compute the dot product of two conformable, rectangular matrices.
+This routine will compute the dot product of two conformable, rectangular matrices...
 ```
 * **Entry 39.** [Jacobi Iteration:](../jacobi.md)
 ```
-This is a routine that solves a linear system of equation through Jacobi iteration.
-Jacobi iteration is less accurate than the other methods listed because it is only an
-approximation; however, it is a much faster and more robust method for solving linear
-systems...
+This is a routine that solves a linear system of equation through Jacobi iteration. Jacobi
+iteration is less accurate than the other methods listed because it is only an approximation;
+however, it is a much faster and more robust method for solving linear systems...
 ```
 * **Entry 40.** [The Power Method:](../power.md)
 ```
-
+This routine will compute the largest eigenvalue in magnitude of a matrix down to a specified
+level of precision. This routine comes in handy when computing the 2-matrix norm. This is a very
+robust method as the accumulation of round-off error helps...
 ```
 * **Entry 41.** [The Inverse Power Method:](../inv_power.md)
 ```
-
+This routine will compute the smallest eigenvalue in magnitude of a matrix down to a specified
+level of precision. This routine comes in handy when computing the 2-matrix norm. This is a very
+robust method as the accumulation ..of round-off error helps.
 ```
 * **Entry 42.** [1-Matrix Norm:](../mat_norm_l1.md)
 ```
-
+This routine computes the 1-norm of a matrix which is simply the largest absolute value column
+sum of a matrix...
 ```
-* **Entry 43.** [2-Matrix Norm:](../mat_norm_l2.md)
+* **Entry 43.** [Infinity-Matrix Norm:](../mat_norm_linf.md)
 ```
-
+This routine computes the infinity-norm of a matrix which is simply the largest absolute value
+row sum of a matrix...
 ```
-* **Entry 44.** [Infinity-Matrix Norm:](../mat_norm_linf.md)
+* **Entry 44.** [2-Matrix Norm:](../mat_norm_l2.md)
 ```
-
+This routine computes the 2-norm of a matrix which is also known as the spectral norm. This
+routine simply computes the largest singular value of a matrix...
 ```
 * **Entry 45.** [Parallelism](../parallel.md)
 ```
