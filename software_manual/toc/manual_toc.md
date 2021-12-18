@@ -204,7 +204,10 @@ This routine will compute the dot product of two conformable, rectangular matric
 ```
 * **Entry 39.** [Jacobi Iteration:](../jacobi.md)
 ```
-
+This is a routine that solves a linear system of equation through Jacobi iteration.
+Jacobi iteration is less accurate than the other methods listed because it is only an
+approximation; however, it is a much faster and more robust method for solving linear
+systems...
 ```
 
 <hr>
