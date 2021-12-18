@@ -181,6 +181,6 @@ def jacobi(A, b, x0, tol, max_iter):
 
 [Previous](mat_prod.md)
 | [Table of Contents](toc/manual_toc.md)
-| [Next]()
+| [Next](power.md)
 
 <hr>
