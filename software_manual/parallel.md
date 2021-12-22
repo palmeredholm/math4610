@@ -34,55 +34,50 @@ The first value (24) is the number of binary digits that define the machine epsi
 decimal version of the same value. The number of decimal digits that can be represented is roughly eight (E-08 on the
 end of the second value).
 
-**Implementation/Code:** The following is the code for smaceps()
+**Implementation/Code:** The following is the code for par_dot_prod()
+```c
+#include <stdio.h>
+#include <omp.h>
+#include <stdlib.h>
 
-      subroutine smaceps(seps, ipow)
-    c
-    c set up storage for the algorithm
-    c --------------------------------
-    c
-          real seps, one, appone
-    c
-    c initialize variables to compute the machine value near 1.0
-    c ----------------------------------------------------------
-    c
-          one = 1.0
-          seps = 1.0
-          appone = one + seps
-    c
-    c loop, dividing by 2 each time to determine when the difference between one and
-    c the approximation is zero in single precision
-    c --------------------------------------------- 
-    c
-          ipow = 0
-          do 1 i=1,1000
-             ipow = ipow + 1
-    c
-    c update the perturbation and compute the approximation to one
-    c ------------------------------------------------------------
-    c
-            seps = seps / 2
-            appone = one + seps
-    c
-    c do the comparison and if small enough, break out of the loop and return
-    c control to the calling code
-    c ---------------------------
-    c
-            if(abs(appone-one) .eq. 0.0) return
-    c
-        1 continue
-    c
-    c if the code gets to this point, there is a bit of trouble
-    c ---------------------------------------------------------
-    c
-          print *,"The loop limit has been exceeded"
-    c
-    c done
-    c ----
-    c
-          return
-    end
+#define VECLEN 100
+#define NUMTHREADS 8
 
+void par_dot_prod(){
+    int i, tid, len=VECLEN, threads=NUMTHREADS;
+    double *a, *b;
+    double sum, psum;
+
+    printf("Starting omp_dotprod_openmp. Using %d threads\n", threads);
+
+    a = (double*) malloc (len*threads*sizeof(double));
+    b = (double*) malloc (len*threads*sizeof(double));
+
+    for(i=0; i<len*threads; ++i){
+        a[i] = 1.0;
+        b[i] = a[i];
+    }
+
+    sum = 0.0;
+
+#pragma omp parallel default(none) private(i,tid,psum) shared(sum, len, threads, a, b) num_threads(threads)
+    {
+        psum = 0.0;
+        tid = omp_get_thread_num();
+
+#pragma omp for reduction(+:sum)
+        for(i=0; i<len*threads; i++){
+            sum += (a[i] * b[i]);
+            psum = sum;
+        }
+        printf("Thread %d partial sum = %f\n",tid, psum);
+    }
+    printf("Done. OpenMP version: sum  =  %f\n", sum);
+
+    free (a);
+    free (b);
+}
+```
 **Last Modified:** December/2021
 
 <hr>
