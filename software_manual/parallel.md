@@ -27,12 +27,20 @@ int main(int argc, char* argv[]) {
 }
 ```
 Output from the lines above:
-
-      24   5.96046448E-08
-
-The first value (24) is the number of binary digits that define the machine epsilon and the second is related to the
-decimal version of the same value. The number of decimal digits that can be represented is roughly eight (E-08 on the
-end of the second value).
+```c
+Starting omp_dotprod_openmp. Using 8 threads
+Thread 3 partial sum = 100.000000
+Thread 1 partial sum = 100.000000
+Thread 4 partial sum = 100.000000
+Thread 0 partial sum = 100.000000
+Thread 6 partial sum = 100.000000
+Thread 7 partial sum = 100.000000
+Thread 5 partial sum = 100.000000
+Thread 2 partial sum = 100.000000
+Done. OpenMP version: sum  =  800.000000
+```
+The above results show how the dot product was done in parallel. The dot product was split up into 8 separate chunks which
+were all performed in parallel by different processors. The end result is the aggregate sum.
 
 **Implementation/Code:** The following is the code for par_dot_prod()
 ```c
