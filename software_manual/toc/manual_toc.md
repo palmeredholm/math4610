@@ -237,7 +237,8 @@ routine simply computes the largest singular value of a matrix...
 ```
 * **Entry 45.** [Parallelism](../parallel.md)
 ```
-
+These routines show how previous routines in this software manual can be optimized using parallel
+programming techniques...
 ```
 
 <hr>
