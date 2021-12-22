@@ -1,31 +1,31 @@
-# Math 4610 Fundamentals of Computational Mathematics Software Manual Template File
+# Parallelism
 
-**Routine Name:**           smaceps
+**Routine Name:** par_dot_prod
 
 **Author:** Palmer Edholm
 
-**Language:** Python.
+**Language:** C.
 
-**Description/Purpose:** This routine will compute the single precision value for the machine epsilon or the number of digits
-in the representation of real numbers in single precision. This is a routine for analyzing the behavior of any computer. This
-usually will need to be run one time for each computer.
+**Description/Purpose:** These routines show how previous routines in this software manual can be optimized using parallel
+programming techniques.
 
-**Input:** There are no inputs needed in this case. Even though there are arguments supplied, the real purpose is to
+**Input (par_dot_prod):** There are no inputs needed in this case. Even though there are arguments supplied, the real purpose is to
 return values in those variables.
 
-**Output:** This routine returns a single precision value for the number of decimal digits that can be represented on the
-computer being queried.
+**Output:** This routine returns a scalar that is the dot product of two very long, conformable vectors.
 
 **Usage/Example:**
 
-The routine has two arguments needed to return the values of the precision in terms of the smallest number that can be
-represented. Since the code is written in terms of a Fortran subroutine, the values of the machine machine epsilon and
-the power of two that gives the machine epsilon. Due to implicit Fortran typing, the first argument is a single precision
-value and the second is an integer.
+The laptop I'm using has eight processors, so the could below is written to optimize my specific computer. This code is
+based off of the code written by Xavier Besseron: https://gitlab.uni.lu/SC-Camp/2018/Parallel_Programming_Models/blob/f25ef077865b1e7ad9142c4d42ec5a00ff973edb/examples/OpenMP/dotProduct/dotProductOpenMP.c.
+```c
+#include "par_dot_prod.h"
 
-      call smaceps(sval, ipow)
-      print *, ipow, sval
-
+int main(int argc, char* argv[]) {
+    par_dot_prod();
+    return 0;
+}
+```
 Output from the lines above:
 
       24   5.96046448E-08
@@ -83,7 +83,7 @@ end of the second value).
           return
     end
 
-**Last Modified:** October/2021
+**Last Modified:** December/2021
 
 <hr>
 
